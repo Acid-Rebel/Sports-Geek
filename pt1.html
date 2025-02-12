@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="renderer.js"></script>
+        <title>
+            Wibledon Podcast 1
+        </title>
+
+        <style>
+
+            .links
+            {
+                float: inline-end;
+                align-items: end;
+                padding-top: 30px;
+            }
+            .intro
+            {
+                text-align: center;
+                font-size: 25px;
+            }
+            
+            .he
+            {
+                position:absolute;
+                background-color: #44acbc;
+                width: 100%;
+                top:0;
+                left:0;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .logo
+            {
+                padding-left: 37%;
+            }
+
+            .hh
+           {
+                border-radius: 50px;
+                background-color: orange;
+           }
+
+           .hh:hover
+           {
+                border-radius: 0;
+                background-color: orange;
+           }
+
+           .foo
+           {
+            background-color:#44acbc;
+            position: absolute;
+            left: 0;
+            bottom: 100;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+           }
+
+           .fooo
+           {
+            padding-left:75px;
+            padding-right:75px;
+           }
+
+           .but
+           {
+            height: 30px;
+            width:125px;
+            padding: 5px,5px,5px,5px;
+           }
+
+           .up
+           {
+            text-decoration: none;
+            font-size: 15px;
+            color:red;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+           }
+
+           
+
+           .image
+           {
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+           }
+
+           .content
+           {
+            margin: auto;
+            padding:10px;
+            width: 70%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F1F1F2;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+           }
+
+           .content:hover
+           {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin: auto;
+            padding:10px;
+            width: 70%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e6f1f2;
+           }
+           body
+           {
+            background-color: #daedef;
+           }
+           .soc
+           {
+            height:40px;
+            width:40px;
+           }
+
+           .socc:hover
+           {
+            height:40px;
+            width:40px;
+           }
+
+           #comment-container
+           {
+            margin: auto;
+            padding:10px;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F1F1F2;
+           }
+
+           #comment-container:hover
+           {
+            margin: auto;
+            padding:10px;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e6f1f2;
+           }
+
+           #comment
+           {
+            margin: auto;
+            padding:10px;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F1F1F2;
+           }
+           
+           #comment:hover
+           {
+            margin: auto;
+            padding:10px;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e6f1f2;
+           }
+
+           #btn-post
+           {
+            height:25px;
+            width:100px;
+            background-color:  white;
+            border: none;
+           }
+
+           #btn-post:hover
+           {
+            height:25px;
+            width:100px;
+            background-color: #e6f1f2;
+            border: none;
+           }
+
+           #reset
+           {
+            height:25px;
+            width:100px;
+            background-color:  white;
+            border: none;
+           }
+
+           #reset:hover
+           {
+            height:25px;
+            width:100px;
+            background-color: #e6f1f2;
+            border: none;
+           }
+           h4
+           {
+            text-decoration: underline red solid 5px;
+            font-size: 20px;
+           }
+           h1
+           {
+            text-decoration: underline red solid 10px;
+           }
+           
+           .left
+           {
+            top:45%;
+            position: fixed;
+            left:5px;
+            font-size: 20px;
+            color:#daedef;
+           }
+           .left:hover
+           {
+            top:45%;
+            position: fixed;
+            left:5px;
+            font-size: 20px;
+            color:black;
+           }
+
+           .right
+           {
+            top:45%;
+            position: fixed;
+            right:5px;
+            font-size: 20px;
+            color:#daedef;
+            text-align: right;
+           }
+           .right:hover
+           {
+            top:45%;
+            position: fixed;
+            left:5px;
+            font-size: 20px;
+            color:black;
+            text-align: right;
+           }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="he">
+            <a href="home.html"><img class="logo" src="image-removebg-preview.png" height="100" width="400"/></a>
+            <div class="links">
+                <table  cellspacing="20" cellpadding="10">
+                    <tr>
+                        <th class="hh"><a href="signin.html" style="text-decoration:none">Login/Sign Up</a></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <a href="sorry.html"><div class="left">
+            <img src="R.png" height="75" width="75">
+            <p>Watch previous podcast</p>
+        </div></a>
+
+        <a href="sorry.html"><div class="right">
+            <img src="R (1).png" height="75" width="75">
+            <p>Watch next podcast</p>
+        </div></a>
+        <div class="intro">
+            <h1>Wibledon Podcast 1</h1>
+        </div>
+        
+        <div class="content">
+
+        <br>
+        <iframe width="1006" height="566" src="https://www.youtube.com/embed/NB2WwmUAkcM" title="Martin Brundle: Racing With Senna And Schumacher | F1 Beyond The Grid Podcast" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>
+            The singles semi-final line-ups are set, with Ons Jabeur vs Aryna Sabalenka and Carlos Alcaraz vs Daniil Medvedev completing the set. Catherine, David and Matt are joined by Charlie Eccleshare of The Athletic to discuss Wednesday's matches. Was that the best tennis Jabeur has ever played? What made David so sure that Jabeur would win? And will Jabeur be able to do to Sabalenka what she did to Rybakina? On the men's side there's chat about how Medvedev turned the match around, what Christopher Eubanks might do next, and the way in which Alcaraz showed his class against Holger Rune. </p>
+         </div>
+            <br>
+        
+            <div id="comment-container">
+                <h4 >Comments</h4>
+                <hr>
+            </div>
+            <br>
+            <div id="comment">
+                <h4 >Add Comment</h4>
+            <table cellspacing="10" >
+                <tr>
+                <td>Name:</td>
+                <td><input type="text" id="name" name="name" required minlength="2" maxlength="50">
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>Comment:</td>
+                    <td><textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+                        </span></td>
+                </tr>
+                <tr>
+                    <td ><button id="btn-post">Post</button></td>
+                    <td><button id="reset">Clear</button></td>
+                </tr>
+
+            </table>
+            <div id="ppp">
+                <p></p>
+            </div>
+             </div>
+            <script>
+                
+            document.getElementById("btn-post").addEventListener("click", function () {
+            
+            var name=document.getElementById("name").value;
+            var comm=document.getElementById("new-comment").value;
+            var newComment = name+": "+document.getElementById("new-comment").value;
+            
+            var commentContainer = document.getElementById("comment-container");
+            var commentElement = document.createElement("p");
+            var hr=document.createElement("hr");
+            if(comm.length>=1 && name.length>=1)
+            {
+                commentElement.innerText = newComment;
+        
+            
+                commentContainer.appendChild(commentElement);
+                commentContainer.appendChild(hr);
+        
+           
+                document.getElementById("new-comment").value = "";
+                document.getElementById("name").value = "";
+       
+                document.getElementById("ppp").innerHTML = "";
+            }
+
+            else if(name=="" && comm.length>=1)
+            {
+                document.getElementById("ppp").innerHTML = "Name is invalid";
+            }
+
+            else if(comm=="" && name.length>=1)
+            {
+                document.getElementById("ppp").innerHTML = "Comment is invalid";
+            }
+
+            else
+            {
+                document.getElementById("ppp").innerHTML = "Name and comment is invalid";
+            }
+            
+        });
+
+        document.getElementById("reset").addEventListener("click", function () {
+            document.getElementById("new-comment").value = "";
+            document.getElementById("name").value = "";
+        });
+        </script>
+        
+        
+        
+         <br>
+         <div class="foo">
+            <table  align="center" >
+                <tr>
+                    <td class="fooo">
+                        <div class="log">
+                            <a href="home.html"><img src="image-removebg-preview.png" height="100" width="400"/></a>
+                        </div>
+                    </td>
+
+                    <td class="fooo">
+                        <table align="center" cellspacing="20" class="social">
+                            <tr>
+                                <td class="soc"><a href="https://www.youtube.com/"><img src="social-06-512.webp" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://www.facebook.com/"><img src="124010.png" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://www.instagram.com/"><img src="Instagram_logo_2016.svg.webp" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://open.spotify.com/"><img src="Spotify_logo_without_text.svg.png" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://www.pinterest.com/"><img src="Pinterest-logo.png" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://twitter.com/home"><img src="X_logo_2023_original.svg" height="30" width="30" class="socc"></a></td>
+                            </tr>
+                         </table>
+                    </td>
+
+                    
+
+                    <td class="fooo">
+                        <div class="abt">
+                            <table  cellspacing="20" cellpadding="10" align="left">
+                                <tr>
+                                    <th class="hh"><a href="abt.html" style="text-decoration:none">About Us</a></th>
+                                </tr>
+                                <tr>
+                                    <th class="hh"><a href="index.html" style="text-decoration:none">Join Us</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>
