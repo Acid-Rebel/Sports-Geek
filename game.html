@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>
+            Game :)
+        </title>
+        <script src="renderer.js"></script>
+        <style>
+            .he
+            {
+                position:absolute;
+                background-color:#44acbc;
+                width: 100%;
+                top:0;
+                left:0;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .logo
+            {
+                padding-left: 37%;
+            }
+
+            .hh
+           {
+                border-radius: 50px;
+                background-color: orange;
+           }
+
+           .hh:hover
+           {
+                border-radius: 0;
+                background-color: orange;
+           }
+
+           .links
+            {
+                float: inline-end;
+                align-items: end;
+                padding-top: 30px;
+            }
+            body
+           {
+            background-image: url("popcatclose.png");
+            background-position: center;
+            background-repeat: 0;
+           }
+           .soc
+           {
+            height:40px;
+            width:40px;
+           }
+
+           .socc:hover
+           {
+            height:40px;
+            width:40px;
+           }
+
+           #score
+           {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: underline 5px white;
+            color: white;
+           }
+        </style>
+
+        <script>
+            var score=0
+            function play()
+            {
+                document.body.style.backgroundImage="url(popopen.png)";
+                score++;
+                document.getElementById("score").innerHTML="Score: "+score;
+                setTimeout(function() {document.body.style.backgroundImage="url(popcatclose.png)";}, 75);
+                
+            }
+        </script>
+    </head>
+
+    <body onclick="play()">
+        <div class="he">
+            <a href="home.html"><img class="logo" src="image-removebg-preview.png" height="100" width="400"/></a>
+            <div class="links">
+                <table  cellspacing="20" cellpadding="10">
+                    <tr>
+                        <th class="hh"><a href="index.html" style="text-decoration:none">Join Us</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br><b align="right"><br><br><br><br><br><br>
+        <h2 id="score">Score: 0</h2>
+    </body>
+</html>

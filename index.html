@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="renderer.js"></script>
+    <title>Join Us - Sports Geek</title>
+    <style>
+        .he
+            {
+                position:absolute;
+                background-color: #44acbc;
+                width: 100%;
+                top:0;
+                left:0;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .logo
+            {
+                padding-left: 37%;
+            }
+
+            .links
+            {
+                float: inline-end;
+                align-items: end;
+                padding-top: 30px;
+            }
+            .intro
+            {
+                text-align: center;
+                font-size: 25px;
+            }
+            .main
+           {
+                border-radius: 20px;
+                height:250px;
+                width:350px;
+           }
+
+           .main:hover
+           {
+               border-radius: 0;
+                height:300px;
+                width:400px;
+           }
+
+           .imgcont
+           {
+                position: relative;
+                font-weight: 500;
+                height:300px;
+                width:400px;
+           } 
+
+        .tablinks {
+            border-radius: 50px;
+            background-color: orange;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            transition: 0.3s;
+        }
+
+
+        .tablinks:hover {
+            border-radius: 0;
+        }
+
+        .tablinks.active {
+            border-radius: 0;
+            background-color: orange;
+        }
+
+        .foo
+           {
+            position:absolute;
+            background-color:#44acbc;
+            width: 100%;
+            bottom:100;
+            right: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+           }
+
+           .fooo
+           {
+            padding-left:75px;
+            padding-right:75px;
+           }
+
+           .soc
+           {
+            height:40px;
+            width:40px;
+           }
+
+           .socc:hover
+           {
+            height:40px;
+            width:40px;
+           }
+
+           body
+           {
+            background-color: #F1F1F2;
+           }
+        
+
+        .tab {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border-top: none;
+        }
+
+        .tabcontent.active {
+            display: block;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label, form input, form select {
+            margin: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .table-container {
+            display: table;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .table-container td, .table-container th {
+            padding: 10px;
+            border: 1px solid transparent;
+            backdrop-filter: blur(5px);
+        }
+
+        header 
+        {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .submit-btn-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .submit-btn {
+            background-color: orange;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 50px;
+        }
+
+        .submit-btn:hover {
+            border-radius: 0;
+        }
+
+        .hh
+           {
+                border-radius: 50px;
+                background-color: orange;
+           }
+
+           .hh:hover
+           {
+                border-radius: 0;
+                background-color: orange;
+           }
+    </style>
+</head>
+<body>
+    <div class="he">
+        <a href="home.html"><img class="logo" src="image-removebg-preview.png" height="100" width="400"/></a>
+        <div class="links">
+            <table  cellspacing="20" cellpadding="10">
+                <tr>
+                    <th class="hh"><a href="signin.html" style="text-decoration:none">Login/Sign Up</a></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br><br><br><br>
+    <header>
+        <h1>Join Us - Sports Geek</h1>
+    </header>
+    <main>
+        <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'personalInfo')">Personal Info</button>
+            <button class="tablinks" onclick="openTab(event, 'accountInfo')">Account Info</button>
+            <button class="tablinks" onclick="openTab(event, 'interests')">Interests</button>
+        </div>
+        <div id="personalInfo" class="tabcontent active">
+            <h2>Personal Information</h2>
+            <form id="personalForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <label>Gender:</label>
+                <table class="table-container">
+                    <tr>
+                        <td><input type="radio" id="male" name="gender" value="male"></td>
+                        <td><label for="male">Male</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="female" name="gender" value="female"></td>
+                        <td><label for="female">Female</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="other" name="gender" value="other"></td>
+                        <td><label for="other">Other</label></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="accountInfo" class="tabcontent">
+            <h2>Account Information</h2>
+            <form id="accountForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="addressLine1">Address Line 1:</label>
+                <input type="text" id="addressLine1" name="addressLine1">
+                <label for="addressLine2">Address Line 2:</label>
+                <input type="text" id="addressLine2" name="addressLine2">
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" name="pincode">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="">Select Country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                    <option value="JP">Japan</option>
+                </select>
+                <label for="state">State:</label>
+                <select id="state" name="state" >
+                    <option value="">Select State</option>
+                </select>
+            </form>
+        </div>
+        <div id="interests" class="tabcontent">
+            <h2>Interests</h2>
+            <form id="interestForm">
+                <label>Have you written any blog before?</label>
+                <table class="table-container">
+                    <tr>
+                        <td><input type="radio" id="yes" name="blogExperience" value="yes"></td>
+                        <td><label for="yes">Yes</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="no" name="blogExperience" value="no"></td>
+                        <td><label for="no">No</label></td>
+                    </tr>
+                </table>
+                <label for="topics">Topics of Interest:</label>
+                <table class="table-container">
+                    <tr>
+                        <td><input type="checkbox" id="cricket" name="topics" value="cricket"></td>
+                        <td><label for="cricket">Cricket</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="volleyball" name="topics" value="volleyball"></td>
+                        <td><label for="volleyball">Volleyball</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="hockey" name="topics" value="hockey"></td>
+                        <td><label for="hockey">Hockey</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="football" name="topics" value="football"></td>
+                        <td><label for="football">Football</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="baseball" name="topics" value="baseball"></td>
+                        <td><label for="baseball">Baseball</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="others" name="topics" value="others"></td>
+                        <td><label for="others">Others:</label></td>
+                       
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="submit-btn-container">
+            <button class="submit-btn" onclick="submitForm(event)">Submit</button>
+        </div>
+    </main>
+
+    <div class="foo">
+            <table  align="center" >
+                <tr>
+                    <td class="fooo">
+                        <div class="log">
+                            <a href="home.html"><img src="image-removebg-preview.png" height="100" width="400"/></a>
+                        </div>
+                    </td>
+
+                    <td class="fooo">
+                        <table align="center" cellspacing="20" class="social">
+                            <tr>
+                                <td class="soc"><a href="https://www.youtube.com/"><img src="social-06-512.webp" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://www.facebook.com/"><img src="124010.png" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://www.instagram.com/"><img src="Instagram_logo_2016.svg.webp" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://open.spotify.com/"><img src="Spotify_logo_without_text.svg.png" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://www.pinterest.com/"><img src="Pinterest-logo.png" height="30" width="30" class="socc"></a></td>
+                                <td class="soc"><a href="https://twitter.com/home"><img src="X_logo_2023_original.svg" height="30" width="30" class="socc"></a></td>
+                            </tr>
+                         </table>
+                    </td>
+
+                    <td class="fooo">
+                        <div class="abt">
+                            <table  cellspacing="20" cellpadding="10" align="left">
+                                <tr>
+                                    <th class="hh"><a href="abt.html" style="text-decoration:none">About Us</a></th>
+                                </tr>
+                                <tr>
+                                    <th class="hh"><a href="index.html" style="text-decoration:none">Join Us</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            const personalForm = document.getElementById('personalForm');
+            const accountForm = document.getElementById('accountForm');
+            const interestForm = document.getElementById('interestForm');
+            const firstName = personalForm['firstName'].value.trim();
+            const lastName = personalForm['lastName'].value.trim();
+            const email = accountForm['email'].value.trim();
+
+            if (!firstName || !lastName || !email) {
+                alert("Please fill out all required fields.");
+                return false;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            personalForm.submit();
+            accountForm.submit();
+            interestForm.submit();
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        document.getElementById('country').addEventListener('change', function() {
+            const selectedCountry = this.value;
+            const stateSelect = document.getElementById('state');
+            stateSelect.disabled = false; // Enable state dropdown on change
+
+            // Clear existing state options
+            stateSelect.innerHTML = "";
+
+            // Add default "Select State" option
+            const defaultOption = document.createElement('option');
+            defaultOption.value = "";
+            defaultOption.text = "Select State";
+            stateSelect.add(defaultOption);
+
+            // Add specific state options based on country (replace with your logic)
+            if (selectedCountry === "US") {
+                const states = ["California", "Texas", "New York"];
+                for (const state of states) {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.text = state;
+                    stateSelect.add(option);
+                }
+            } else if (selectedCountry === "CA") {
+                const states = ["Ontario", "Quebec", "British Columbia"];
+                for (const state of states) {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.text = state;
+                    stateSelect.add(option);
+                }
+            }
+            else if (selectedCountry === "UK") {
+                const states = ["London", "scotland", "Whales"];
+                for (const state of states) {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.text = state;
+                    stateSelect.add(option);
+                }
+            }
+            else if (selectedCountry === "FR") {
+                const states = ["Paris", "Croissant", "wine"];
+                for (const state of states) {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.text = state;
+                    stateSelect.add(option);
+                }
+            }
+            else if (selectedCountry === "DE") {
+                const states = ["Berlin", "Frankfurt", "Dublin"];
+                for (const state of states) {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.text = state;
+                    stateSelect.add(option);
+                }
+            }
+            else if (selectedCountry === "JP") {
+                const states = ["Tokyo", "kyoto", "Hiroshima"];
+                for (const state of states) {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.text = state;
+                    stateSelect.add(option);
+                }
+            }
+            else {
+                // Disable state dropdown if no country is selected
+                stateSelect.disabled = true;
+            }
+        });
+    </script>
+</body>
+</html>
+
